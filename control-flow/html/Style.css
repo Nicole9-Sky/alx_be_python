@@ -1,0 +1,99 @@
+/* General Reset */
+body, h1, p, ul, li{
+    margin: 0;
+    padding: 0;
+    box-sizing: boarder-box;
+}
+
+/* body styles */
+body {
+    font-family: Arial, sans-serif;
+    background:
+    linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fad0c4);
+    background-size: 400% 400%;
+    color: #fff
+    animation: gradient 10s infinite ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+    /* Gradient Animation */
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%;
+        }
+    }
+
+/* Container Styles */
+.container {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0,0,0,6);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(o,o,o,0.4);
+    max-width: 700px;
+    width: 90%;
+    backdrop-filter: blur(10px);
+}
+
+/* Header styles */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffe600;
+    text-shadow: 0 0 10px #ffd700, 00 20px #ffa500;
+}
+
+header p { 
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffebcd;
+}
+
+/* Agenda List Styles */
+.agenda {
+    list-style: none;
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 20px auto;
+    padding: 0;
+    line-height: 2;
+}
+
+.agenda li {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 255,255, 0.3);
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.agenda li;hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Footer Styles */
+footer p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #f5f5dc;
+    text-shadow: 0 0 10px #fff;
+    font-style: italic;
+}
+
+/* Adding Glow Effect */
+header h1, footer p {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffa500; }
+    to { text-shadow: 0 0 20px #ffff33 0 0 30px #ffcc00;}
+}
