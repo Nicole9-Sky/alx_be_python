@@ -2,14 +2,11 @@ FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5  
 
 def convert_to_celsius(fahrenheit):
-    
-    celsius = (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR 
-    return celsius  
-
+    global FAHRENHEIT_TO_CELSIUS_FACTOR  # Declare global variable
+    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 def convert_to_fahrenheit(celsius):
-    
-    fahrenheit = (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
-    return fahrenheit 
+    global CELSIUS_TO_FAHRENHEIT_FACTOR  # Declare global variable
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 def main():
     print("Welcome to the Temperature Conversion Tool!") 
@@ -33,7 +30,7 @@ def main():
             
     except ValueError:
         print("Invalid temperature. Please enter a numeric value.")
-
-            
+        
+        
 if __name__ == "__main__":
     main()
