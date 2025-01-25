@@ -8,12 +8,12 @@ class Book:
     
     
 class EBook(Book):
-    def __init__(self, title, author, full_sizes):
+    def __init__(self, title, author, file_size):
         super().__init__(title, author)
-        self.full_sizes = full_sizes
+        self.file_size = file_size
         
-        def __str__(self):
-            return f"EBook: {self.title} by {self.author}, full_sizes: {full_sizes}"
+    def __str__(self):
+            return f"EBook: {self.title} by {self.author}, File_Size: {self.file_size}KB"
         
 class PrintBook(Book):
     def __init__(self, title, author, page_count):
@@ -21,8 +21,7 @@ class PrintBook(Book):
         self.page_count = page_count
         
         def __str__(self):
-            return f"PrintBook: {self.title} by {self.author}, page_count: {page_count}"
-        
+            return f"PrintBook: {self.title} by {self.author}, Page_count: {page_count}KB"
 class Library:
     def __init__(self):
         self.books = []
