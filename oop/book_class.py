@@ -8,7 +8,7 @@ class Book:
         
     def __del__(self):
         # Destructor that prints a message when the book instance is deleted.
-        return f"Deleting {self.title}"    
+        print(f"Deleting {self.title}") 
     
     def __str__(self):
         # String representation for informal display.
